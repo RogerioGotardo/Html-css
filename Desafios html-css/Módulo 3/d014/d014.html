@@ -14,44 +14,99 @@
         }
 
         caption {
-            font-size: 1.3em;
+            font-size: 1.9em;
             font-weight: bold;
             padding: 10px;
         }
 
         th, td {
-            border: 1px solid gray;
+            border: 1px solid black;
             padding: 10px;
+            text-align: center;
         }
+
+        .ali {
+            background-color: gray;
+            text-align: left;
+            color: white;
+        }
+
+        .ma {
+            text-align: left;
+        }
+
+        .pri {
+            background-color: gray;
+            color: white;
+        }
+
     </style>
 </head>
-<caption>Desafio 14</caption>
+<h1>Exercícios Tabelas</h1>
 <body>
     <table>
+        <caption>Desafio 14</caption>
         <thead>
-            <tr>
-                <th rowspan="2">Área</th>
-                <th rowspan="2">Disciplina</th>
-                <th>Notas</th>
-                <th rowspan="2">Média</th>
+            <tr class="pri">
+                <th rowspan="2" scope="col">Área</th>
+                <th rowspan="2" scope="col">Disciplina</th>
+                <th colspan="2" scope="colgroup">Notas</th>
+                <th rowspan="2" scope="col">Média</th>
+                <tr class="pri">
+                    <th scope="col">NOTA 1</th>
+                    <th scope="col">NOTA 2</th>
+                </tr>
+
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th>NOTA 1</th>
-                <th>NOTA 2</th>
-            </tr>
-            <tr>
-                <th>Exatas</th>
-                <td>Matemática</td>
+                <th rowspan="4" scope="rowgroup" >Exatas</th>
+                <td class="ma">Matemática</td>
                 <td>45</td>
                 <td>80</td>
-                <td>60</td>
+                <td>62,5</td>
+            </tr>
+            <tr>
+                <td class="ma">Física</td>
+                <td>67</td>
+                <td>98</td>
+                <td>82,5</td>
+            </tr>
+            <tr>
+                <td class="ma">Química</td>
+                <td>69</td>
+                <td>88</td>
+                <td>78,5</td>
+            </tr>
+            <tr>
+                <td class="ma">Biologia</td>
+                <td>79</td>
+                <td>90</td>
+                <td>84,5</td>
+            </tr>
+            <tr>
+                <th class= "ali"colspan="4" scope="row" >Média de Exatas</th>
+                <td>77</td>
+            </tr>
+            <tr>
+                <th rowspan="2" scope="rowgroup" >Humanas</th>
+                <td class="ma">História</td>
+                <td>87</td>
+                <td>64</td>
+                <td>75,5</td>
+            </tr>
+            <tr>
+                <td class="ma">Geografia</td>
+                <td>89</td>
+                <td>90</td>
+                <td>83,5</td>
             </tr>
 
         </tbody>
         <tfoot>
-
+            <th class="ali"colspan="4" scope="col" >Média de Humanas</th>
+            <td>79,5</td>
         </tfoot>
     </table>
     
