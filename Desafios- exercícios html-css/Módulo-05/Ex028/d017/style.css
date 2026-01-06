@@ -10,7 +10,7 @@ div.container {
     display: grid;
     grid-template-rows: 80px 40px 1fr 40px;
     grid-template-columns: 1fr 150px;
-    gap: 50px;
+    gap: 5px;
 }
 
 .caixa {    
